@@ -1,25 +1,18 @@
 :root {
-  /* Cores de texto */
-  --color-text: #f3f2ee; /* Texto principal */
-  --color-text-secondary: #9b9b9b; /* Texto secundário */
+  --color-text: #333333;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-dark: #343a40;
+  --color-bg: #f8f9fa;
 
-  /* Cores principais */
-  --color-primary: #4a90e2; /* 60% Cor principal do tema */
-  --color-secondary: #e78c3b; /* 30% Cor secundária */
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
 
-  /* Cores complementares e sutis */
-  --color-accent: #ffcc00; /* 10% Cor de destaque (exemplo) */
-  --color-bg-highlight: #2a2d30; /* Fundo alternado sutil para seções */
-
-  /* Cores de fundo e escuros */
-  --color-dark: #2c3e50; /* Cor escura para texto ou fundo */
-  --color-bg: #171b1e; /* Fundo principal */
-
-  /* Cores para feedback */
-  --color-success: #5cb85c; /* Verde suave para sucesso */
-  --color-error: #d9534f; /* Vermelho suave para erro */
-
-  /* Fontes */
-  --font-poppins: "Poppins", sans-serif; /* Fonte principal */
-  --font-lato: "Lato", sans-serif; /* Fonte secundária */
+[data-theme="dark"] {
+  --color-text: #eaeaea;
+  --color-primary: #66b2ff;
+  --color-secondary: #a6a6a6;
+  --color-dark: #c0c0c0;
+  --color-bg: #1a1a1a;
 }
