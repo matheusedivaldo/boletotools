@@ -1,11 +1,13 @@
-import styles from './App.module.css'
+import React from 'react';
+import styles from "./App.module.css";
+import NavBar from "./components/NavBar/NavBar.jsx";
 
 function App() {
   return (
-    <>
-      <h1 className={styles.App}>Boleto Tools</h1>
-    </>
-  )
+    <div className={styles.App}>
+      <NavBar />
+    </div>
+  );
 }
 
-export default App
+export default App;
