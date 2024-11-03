@@ -1,8 +1,8 @@
 :root {
   --color-text: #333333;
-  --color-primary: #007bff;
-  --color-secondary: #6c757d;
-  --color-dark: #343a40;
+  --color-primary: #4caf50;
+  --color-secondary: #8d8d8d;
+  --color-dark: #424242;
   --color-bg: #f8f9fa;
 
   --font-primary: "Roboto", sans-serif;
@@ -11,8 +11,8 @@
 
 [data-theme="dark"] {
   --color-text: #eaeaea;
-  --color-primary: #66b2ff;
-  --color-secondary: #a6a6a6;
+  --color-primary: #66bb6a;
+  --color-secondary: #b0b0b0;
   --color-dark: #c0c0c0;
   --color-bg: #1a1a1a;
 }
