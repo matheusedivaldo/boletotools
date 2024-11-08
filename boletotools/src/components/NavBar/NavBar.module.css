@@ -59,6 +59,7 @@
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-bg);
+    margin: 0 5%;
   }
 
   .menu {
@@ -106,4 +107,22 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Hamburger Icon Customization */
+.hamburger-react {
+  cursor: pointer;
+}
+
+/* Custom Hamburger Icon Color */
+.hamburger-react .hamburger-inner,
+.hamburger-react .hamburger-inner::before,
+.hamburger-react .hamburger-inner::after {
+  background-color: var(--color-primary); /* Use color from palette */
+}
+
+.hamburger-react.is-active .hamburger-inner,
+.hamburger-react.is-active .hamburger-inner::before,
+.hamburger-react.is-active .hamburger-inner::after {
+  background-color: var(--color-dark); /* Color when active */
 }
