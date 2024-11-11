@@ -127,11 +127,11 @@
 
 .clearButton {
   background-color: transparent;
-  color: var(--color-red-soft);
+  color: var(--color-primary);
   padding: 14px 30px;
   font-size: 16px;
   font-family: var(--font-primary);
-  border: 2px solid var(--color-red-soft);
+  border: 2px solid var(--color-primary);
   border-radius: 25px;
   transition: background-color 0.3s ease;
   height: 50px;
@@ -139,11 +139,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  outline: 2px solid transparent;
 }
 
 .clearButton:hover {
-  background-color: var(--color-red-soft);
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  outline: 2px solid var(--color-primary);
 }
 
 @media (max-width: 768px) {
