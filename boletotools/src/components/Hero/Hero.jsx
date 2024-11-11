@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
     const [inputValue, setInputValue] = useState("");
     const maxLength = 56;
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []);
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -14,7 +21,6 @@ const Hero = () => {
 
     const handleValidate = () => {
         console.log("Validando:", inputValue);
-        // Implementar lógica de validação aqui
     };
 
     const handleClear = () => {
@@ -30,6 +36,7 @@ const Hero = () => {
             <form className={styles.heroForm} onSubmit={(e) => e.preventDefault()}>
                 <div className={styles.heroInputContainer}>
                     <input
+                        ref={inputRef}
                         type="text"
                         id="input"
                         value={inputValue}
