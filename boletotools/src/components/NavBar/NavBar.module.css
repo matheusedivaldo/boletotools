@@ -109,20 +109,14 @@
   }
 }
 
-/* Hamburger Icon Customization */
-.hamburger-react {
-  cursor: pointer;
-}
-
-/* Custom Hamburger Icon Color */
 .hamburger-react .hamburger-inner,
 .hamburger-react .hamburger-inner::before,
 .hamburger-react .hamburger-inner::after {
-  background-color: var(--color-primary); /* Use color from palette */
+  background-color: var(--color-primary);
 }
 
 .hamburger-react.is-active .hamburger-inner,
 .hamburger-react.is-active .hamburger-inner::before,
 .hamburger-react.is-active .hamburger-inner::after {
-  background-color: var(--color-dark); /* Color when active */
+  background-color: var(--color-dark);
 }

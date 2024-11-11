@@ -35,7 +35,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.menu}>
                 <div className={styles.menuBtn} onClick={handleMenuToggle}>
-                    <Hamburger toggled={menuOpen} toggle={setMenuOpen} color="#ffc107" />
+                    <Hamburger toggled={menuOpen} toggle={setMenuOpen} color="#eceff1" />
                 </div>
                 <ul className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ''} ${fadeOut ? styles.fadeOut : ''}`}>
                     {menuItems.map((item, index) => (
