@@ -56,7 +56,7 @@ const Hero = () => {
 
     return (
         <div className={styles.heroContainer}>
-            <h1 className={styles.heroTitle}>Boletotools</h1>
+            <h1 className={styles.heroTitle}>Boletools</h1>
             <p className={styles.heroDescription}>
                 Utilize nossa ferramenta para validar boletos com precisão, seja a partir do código de barras ou da linha digitável. Também realizamos conversões rápidas entre os dois formatos, tornando o processo mais eficiente e seguro.
             </p>
