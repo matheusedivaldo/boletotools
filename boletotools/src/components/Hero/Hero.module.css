@@ -148,6 +148,35 @@
   outline: 2px solid var(--color-primary);
 }
 
+.validationResult {
+  margin-top: 20px;
+  background-color: var(--color-light);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.validationResult h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.validationResult ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.validationResult li {
+  font-size: 16px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.validationResult li strong {
+  color: var(--color-primary);
+}
+
 @media (max-width: 768px) {
   .heroContainer {
     max-width: 90%;
@@ -180,6 +209,14 @@
 
   .buttonsContainer {
     justify-content: flex-start;
+  }
+
+  .validationResult h2 {
+    font-size: 1.6rem;
+  }
+
+  .validationResult li {
+    font-size: 14px;
   }
 }
 
