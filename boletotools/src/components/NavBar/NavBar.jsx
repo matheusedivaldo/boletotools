@@ -1,46 +1,35 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import Hamburger from 'hamburger-react';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [fadeOut, setFadeOut] = useState(false);
 
-    const handleMenuToggle = () => {
-        if (menuOpen) {
-            setFadeOut(true);
-            setTimeout(() => {
-                setMenuOpen(false);
-                setFadeOut(false);
-            }, 200);
-        } else {
-            setMenuOpen(true);
-        }
-    };
-
-    const handleLinkClick = () => {
-        setFadeOut(true);
-        setTimeout(() => {
-            setMenuOpen(false);
-            setFadeOut(false);
-        }, 200);
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
     };
 
     const menuItems = [
+        { label: 'Início', href: '#home' },
         { label: 'Funcionalidades', href: '#features' },
-        { label: 'Contato', href: '#contact' }
+        { label: 'Sobre', href: '#about' },
+        { label: 'Contato', href: '#contact' },
     ];
 
     return (
         <nav className={styles.navbar}>
-            <div className={styles.menu}>
-                <div className={styles.menuBtn} onClick={handleMenuToggle}>
-                    <Hamburger toggled={menuOpen} toggle={setMenuOpen} color="#eceff1" />
+            <div className={styles.navbarContent}>
+                <div className={styles.logo}>Boletools</div>
+                <div className={`${styles.menuIcon} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <ul className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ''} ${fadeOut ? styles.fadeOut : ''}`}>
+                <ul className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
                     {menuItems.map((item, index) => (
-                        <li key={index} onClick={handleLinkClick} className={fadeOut ? styles.fadeOut : ''}>
-                            <a href={item.href}>{item.label}</a>
+                        <li key={index} className={styles.menuItem}>
+                            <a href={item.href} onClick={() => setMenuOpen(false)}>
+                                {item.label}
+                            </a>
                         </li>
                     ))}
                 </ul>
