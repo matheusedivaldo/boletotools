@@ -21,7 +21,7 @@ const features = [
 
 const Features = () => {
     return (
-        <section className={styles.featuresContainer}>
+        <section className={styles.featuresContainer} id="features">
             <h2 className={styles.featuresTitle}>Funcionalidades</h2>
             <div className={styles.featuresGrid}>
                 {features.map((feature, index) => (

@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} id="contact">
             <div className={styles.footerContent}>
                 <div className={styles.brand}>
                     <h2>Boletools</h2>
@@ -15,15 +15,15 @@ const Footer = () => {
                     <ul>
                         <li>
                             <FiMail className={styles.icon} />
-                            <a href="mailto:contato@boletools.com">contato@boletools.com</a>
+                            <a href="mailto:matheusedivaldodev@gmail.com">matheusedivaldodev@gmail.com</a>
                         </li>
                         <li>
                             <FiPhone className={styles.icon} />
-                            <a href="tel:+551199999999">+55 (11) 99999-9999</a>
+                            <a href="tel:+5511932250639">(11) 93225-0639</a>
                         </li>
                         <li>
                             <FiLinkedin className={styles.icon} />
-                            <a href="https://linkedin.com/in/boletools" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/matheus-silva-8297a320a/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
                             </a>
                         </li>
@@ -34,7 +34,6 @@ const Footer = () => {
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#features">Funcionalidades</a></li>
-                        <li><a href="#contact">Contato</a></li>
                         <li><a href="#privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
