@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -44,7 +45,7 @@ const Navbar = () => {
                         onClick={toggleDarkMode}
                         aria-label="Toggle dark mode"
                     >
-                        {darkMode ? '🌙' : '☀️'}
+                        {darkMode ? <MdDarkMode size={20} /> : <MdLightMode size={20} />}
                     </button>
                 </div>
             </div>

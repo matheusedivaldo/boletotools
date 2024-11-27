@@ -86,15 +86,28 @@
 .darkModeToggle {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   color: var(--color-primary);
-  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .darkModeToggle:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.darkModeToggle:focus,
+.darkModeToggle:active {
+  outline: none;
+  border: none;
 }
 
 @media (max-width: 768px) {
