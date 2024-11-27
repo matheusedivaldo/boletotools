@@ -25,7 +25,10 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navbarContent}>
                 <div className={styles.logo}>Boletools</div>
-                <div className={styles.menuIcon} onClick={toggleMenu}>
+                <div
+                    className={`${styles.menuIcon} ${menuOpen ? styles.open : ''}`}
+                    onClick={toggleMenu}
+                >
                     <span></span>
                     <span></span>
                     <span></span>
