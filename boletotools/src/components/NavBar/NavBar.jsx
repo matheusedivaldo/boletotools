@@ -3,9 +3,15 @@ import styles from './Navbar.module.css';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.documentElement.setAttribute('data-theme', darkMode ? 'light' : 'dark');
     };
 
     const menuItems = [
@@ -18,20 +24,29 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navbarContent}>
                 <div className={styles.logo}>Boletools</div>
-                <div className={`${styles.menuIcon} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
+                <div className={styles.menuIcon} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
-                    {menuItems.map((item, index) => (
-                        <li key={index} className={styles.menuItem}>
-                            <a href={item.href} onClick={() => setMenuOpen(false)}>
-                                {item.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <div className={`${styles.menuWrapper} ${menuOpen ? styles.menuOpen : ''}`}>
+                    <ul className={styles.menu}>
+                        {menuItems.map((item, index) => (
+                            <li key={index} className={styles.menuItem}>
+                                <a href={item.href} onClick={() => setMenuOpen(false)}>
+                                    {item.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    <button
+                        className={styles.darkModeToggle}
+                        onClick={toggleDarkMode}
+                        aria-label="Toggle dark mode"
+                    >
+                        {darkMode ? '🌙' : '☀️'}
+                    </button>
+                </div>
             </div>
         </nav>
     );
